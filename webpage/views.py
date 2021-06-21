@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Product
 
 posts = [
     {
@@ -17,7 +18,7 @@ posts = [
 
 def home(request):
     info = {
-        'posts': posts,
+        'products': Product.objects.all(),
         'title': 'Home'
     }
     return render(request, 'webpage/index.html', info)
