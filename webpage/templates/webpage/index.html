@@ -6,7 +6,7 @@
         <h2>{{product.name}}</h2>
         <h4>by {{product.added_by}} on {{product.date_added|date:"d F, Y"}}</h4>
         <p>{{product.description}}</p>
-        <p>{{product.image_url}}</p>
+        <img src="{{ product.image.url }}" alt="">
     {% endfor %}
 {% endblock content %}
 
