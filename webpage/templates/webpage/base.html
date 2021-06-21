@@ -18,10 +18,11 @@
 </head>
 <body>
     <nav class="nav nav-pills flex-column flex-sm-row">
-        <a class="flex-sm-fill text-sm-center nav-link active" href="/">HOME</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="about/">ABOUT</a>
-        <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="{% url 'home' %}">HOME</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="{% url 'repairs' %}">REPAIRS</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="{% url 'about' %}">ABOUT</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="{% url 'products' %}">PRODUCTS</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="{% url 'contact' %}">CONTACT</a>
     </nav>
     <div class="container">
         {% block content %} {% endblock content %}

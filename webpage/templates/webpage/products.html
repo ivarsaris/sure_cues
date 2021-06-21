@@ -1,0 +1,33 @@
+{% extends 'webpage/base.html' %}
+
+{% block content %}
+    <h1>Home Page</h1>
+    <h2>Cues for sale</h2>
+    {% for product in products %}
+        {% if product.type == 1%}
+            <h3>{{product.name}}</h3>
+            <h4>by {{product.added_by}} on {{product.date_added|date:"d F, Y"}}</h4>
+            <p>{{product.description}}</p>
+            <img src="{{ product.image.url }}" alt="">
+            <h6>{{product.price}}</h6>
+        {% endif %}
+    {% endfor %}
+    <h2>Shafts</h2>
+    {% for product in products %}
+        {% if product.type == 2%}
+            <h3>{{product.name}}</h3>
+            <h4>by {{product.added_by}} on {{product.date_added|date:"d F, Y"}}</h4>
+            <p>{{product.description}}</p>
+            <img src="{{ product.image.url }}" alt="">
+            <h6>{{product.price}}</h6>
+        {% endif %}
+    {% endfor %}
+    <h2>Wraps</h2>
+    {% for product in products %}
+        {% if product.type == 3%}
+            <h3>{{product.name}}</h3>
+            <img src="{{ product.image.url }}" alt="">
+        {% endif %}
+    {% endfor %}
+{% endblock content %}
+

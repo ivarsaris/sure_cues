@@ -1,27 +1,25 @@
 from django.shortcuts import render
-from .models import Product
-
-posts = [
-    {
-        'author': 'Andreas',
-        'title': 'news1',
-        'content': 'I have a new website!',
-        'date': '20-05-2021'
-    }, 
-    {
-        'author': 'Andreas',
-        'title': 'news2',
-        'content': 'I have a new home!',
-        'date': '20-06-2021'
-    }
-]
+from .models import Product, Repair
 
 def home(request):
+    return render(request, 'webpage/index.html', {'title': 'Home'})
+
+def products(request):
     info = {
         'products': Product.objects.all(),
-        'title': 'Home'
+        'title': 'Products'
     }
-    return render(request, 'webpage/index.html', info)
+    return render(request, 'webpage/products.html', info)
+
+def repairs(request):
+    info = {
+        'repairs': Repair.objects.all(),
+        'title': 'Repairs'
+    }
+    return render(request, 'webpage/repairs.html', info)
 
 def about(request):
     return render(request, 'webpage/about.html', {'title': 'About'})
+
+def contact(request):
+    return render(request, 'webpage/contact.html', {'title': 'Contact'})

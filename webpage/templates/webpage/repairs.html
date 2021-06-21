@@ -1,0 +1,70 @@
+{% extends "webpage/base.html" %}
+{% block content %}
+    <h1>Repairs</h1>
+    <table class="table">
+        <thead>
+            <tr>
+              <th scope="col">TIPS</th>
+              <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for repair in repairs %}
+                {% if repair.type == 1%}
+                    <tr>
+                        <td>{{repair.name}}</td>
+                        <td>&#8364; {{repair.price}}</td>
+                    </tr>
+                {% endif %}    
+            {% endfor %}
+        </tbody>
+        <thead>
+            <tr>
+              <th scope="col">FERRULES</th>
+              <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for repair in repairs %}
+                {% if repair.type == 2%}
+                    <tr>
+                        <td>{{repair.name}}</td>
+                        <td>&#8364; {{repair.price}}</td>
+                    </tr>
+                {% endif %}    
+            {% endfor %}
+        </tbody>
+        <thead>
+            <tr>
+              <th scope="col">CUE SHAFT</th>
+              <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for repair in repairs %}
+                {% if repair.type == 3%}
+                    <tr>
+                        <td>{{repair.name}}</td>
+                        <td>&#8364; {{repair.price}}</td>
+                    </tr>
+                {% endif %}    
+            {% endfor %}
+        </tbody>
+        <thead>
+            <tr>
+              <th scope="col">CUE BUTT</th>
+              <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for repair in repairs %}
+                {% if repair.type == 4%}
+                    <tr>
+                        <td>{{repair.name}}</td>
+                        <td>&#8364; {{repair.price}}</td>
+                    </tr>
+                {% endif %}    
+            {% endfor %}
+        </tbody>
+      </table>
+{% endblock content %}
