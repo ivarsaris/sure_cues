@@ -2,10 +2,11 @@
 
 {% block content %}
     <h1>Home Page</h1>
-    {% for post in posts %}
-        <h2>{{post.title}}</h2>
-        <h4>by {{post.author}} on {{post.date}}</h4>
-        <p>{{post.content}}</p>
+    {% for product in products %}
+        <h2>{{product.name}}</h2>
+        <h4>by {{product.added_by}} on {{product.date_added|date:"d F, Y"}}</h4>
+        <p>{{product.description}}</p>
+        <p>{{product.image_url}}</p>
     {% endfor %}
 {% endblock content %}
 
