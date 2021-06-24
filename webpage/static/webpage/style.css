@@ -1,9 +1,36 @@
+/* general styling */
+hr {
+    background:white;
+}
+
+/* navbar */
 .navbar {
     box-shadow: 0px 2px 5px #777;
 }
 
 .navbar-logo {
     margin: 10px;
+}
+/* contact form */
+.contact-form {
+    background:rgba(0,0,0,.6);
+    color:#0dcaf0;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    padding: 20px;
+    box-shadow: 0 0 5px 2px grey;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.contact-form-button {
+    margin-top: 10px;
+}
+
+.contact-icon {
+    size: 20px;
 }
 
 footer {
