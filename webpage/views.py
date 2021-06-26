@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Product, Repair
+from .models import Product, Repair, GalleryImage
 from django.core.mail import send_mail
 
 def home(request):
@@ -21,7 +21,11 @@ def repairs(request):
     return render(request, 'webpage/repairs.html', info)
 
 def about(request):
-    return render(request, 'webpage/about.html', {'title': 'About'})
+    info = {
+        'gallery_images': GalleryImage.objects.all(),
+        'title': 'About'
+    }
+    return render(request, 'webpage/about.html', info)
 
 def contact(request):
     if request.method == "POST":

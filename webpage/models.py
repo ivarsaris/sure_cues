@@ -22,3 +22,10 @@ class Repair(models.Model):
 
     def __str__(self):
         return f'{self.name} Repair'
+
+class GalleryImage(models.Model):
+    name = models.CharField(max_length=40)
+    image = models.ImageField(default='default.jpg', upload_to='gallery_images')
+
+    def __str__(self):
+        return f'{self.name} GalleryImage'
