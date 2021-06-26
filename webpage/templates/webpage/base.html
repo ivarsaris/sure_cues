@@ -33,7 +33,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navmenu">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navigation navbar-nav ms-auto" id="nav">
                     <li class="nav-item">
                         <a href="{% url 'sure-home' %}" class="nav-link">HOME</a>
                     </li>
@@ -57,11 +57,11 @@
         {% block content %} {% endblock content %}
     </div>
     <!-- FOOTER -->
-    <footer class="p-5 bg-infoo text-center fixed-bottom">
+    <footer class="p-3 bg-infoo text-center fixed-bottom">
         <div class="container">
             
-            <p class="lead"> Copyright &copy; 2021 Sure Custom Cues</p>
-            <a href="#" class="position-absolute bottom-0 end-0 p-5 text-dark">
+            <p class="lead">&copy; 2021 Sure Custom Cues</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-3 text-dark">
                 <i class="bi bi-arrow-up-square h1"></i>
             </a>
         </div>
@@ -79,6 +79,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="{% static 'webpage/scripts/navbar.js'%}"></script>        
 </body>
 
 </html>
