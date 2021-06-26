@@ -8,9 +8,41 @@ img {
     max-width: auto;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 100px;
+    background-color: #2c3531;
+}
+
+.bg-infoo {
+    background-color: #D9B08c;
+}
+
+.text-infoo {
+    color: #D9B08c;
+}
+
+.btn-infoo{
+    background-color: #D9B08c;
+}
+
+.bg-darkk {
+    background-color: black;
+}
+
+.bg-secondaryy {
+    background-color: #D1E8E2;
+}
+
+.text-custom {
+    color: black;
+}
+
 /* navbar */
 .navbar {
-    box-shadow: 0px 2px 5px #777;
+    box-shadow: 0px 2px 5px #D1E8E2;
 }
 
 .navbar-logo {
@@ -20,7 +52,7 @@ img {
 /* homepage carousel */
 
 .carousel {
-    box-shadow: 0 0 5px 2px #0dcaf0;
+    box-shadow: 0 0 5px 2px #D1E8E2;
     margin-top: 50px;
 }
 
@@ -45,15 +77,35 @@ img {
     }
 }
 
+/* products page */
+.cues-heading{
+    padding: 2rem;
+}
+
+.shafts-heading {
+    padding: 2rem;
+    box-shadow: 0 0 5px 2px black;
+    border-radius: 5px;
+}
+
+.product-heading {
+    box-shadow: 0 0 5px 2px #D9B08c;
+    border-radius: 5px;
+}
+
 /* repairs table */
 .repair-price {
     text-align: right;
 }
 
+.repairs-table-body {
+    color: white;
+}
+
 /* contact form */
 .contact-form {
     background:rgba(0,0,0,.6);
-    color:#0dcaf0;
+    color:#D9B08c;
     margin-bottom: 100px;
     margin-top: 50px;
     padding: 20px;

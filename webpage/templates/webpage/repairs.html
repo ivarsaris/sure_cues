@@ -2,17 +2,17 @@
 {% block content %}
 <section class="head p-5">
     <div class="container repairs-table">
-        <h1 class='text-center py-3'>Repairs</h1>
-        <div class="row justify-content-center">
+        <h1 class='text-center bg-infoo text-custom shafts-heading py-3'>Repairs</h1>
+        <div class="row justify-content-center mt-5">
             <div class="col-md-6 col-xl-4">
-                <table class="table table-striped">
+                <table class="table bg-darkk text-infoo product-heading cues-heading">
                     <thead>
                         <tr>
                             <th scope="col">TIPS</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="repairs-table-body">
                         {% for repair in repairs %}
                         {% if repair.type == 1%}
                         <tr>
@@ -28,7 +28,7 @@
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="repairs-table-body">
                         {% for repair in repairs %}
                         {% if repair.type == 2%}
                         <tr>
@@ -41,14 +41,14 @@
                 </table>
             </div>
             <div class="col-md-6 col-xl-4">
-                <table class="table table-striped">
+                <table class="table bg-darkk text-infoo product-heading cues-heading">
                     <thead>
                         <tr>
                             <th scope="col">CUE SHAFT</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="repairs-table-body">
                         {% for repair in repairs %}
                         {% if repair.type == 3%}
                         <tr>
@@ -64,7 +64,7 @@
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="repairs-table-body">
                         {% for repair in repairs %}
                         {% if repair.type == 4%}
                         <tr>
@@ -79,4 +79,5 @@
         </div>
     </div>
     <section class="head p-5">
+
         {% endblock content %}
