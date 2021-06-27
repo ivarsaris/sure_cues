@@ -11,6 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap" rel="stylesheet">
     <!-- own CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'webpage/style.css' %}">
     <!-- favicon -->
@@ -28,7 +32,6 @@
         <div class="container">
             <a href="{% url 'sure-home' %}" class="navbar-brand"><img src="{% static 'webpage/media/logo.png'%}"
                     alt="logo" class="rounded-circle mb-3 navbar-logo">SURE CUSTOM CUES</a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,8 +62,13 @@
     <!-- FOOTER -->
     <footer class="p-3 bg-infoo text-center fixed-bottom">
         <div class="container">
-            
-            <p class="lead">&copy; 2021 Sure Custom Cues</p>
+            <p class="lead">
+                &copy; 2021 Sure Custom Cues
+                <a href="https://www.instagram.com/surecustomcues/" target="_blank"><i class="bi bi-instagram h5"></i></a>
+                <a href="https://www.facebook.com/SureCustomCues/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UCfg0u0HJyt2nBWNYqOqiirQ" target="_blank"><i class="bi bi-youtube"></i></a>
+            </p>
+
             <a href="#" class="position-absolute bottom-0 end-0 p-3 text-dark">
                 <i class="bi bi-arrow-up-square h1"></i>
             </a>

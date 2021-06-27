@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     margin-bottom: 100px;
     background-color: #2c3531;
-    /* #3d3d3d */
+    font-family: 'Alegreya', serif;
 }
 
 .bg-infoo {
@@ -46,8 +46,17 @@ body {
     margin: 10px;
 }
 
+@media screen and (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    footer .lead {
+        font-size: 1rem;
+    }
+}
+
 .navbar-nav .nav-item .active {
-    background: #E8CFBA;
+    background: #F3E7DC;
 }
 
 .navbar-nav .nav-item,
@@ -89,7 +98,7 @@ nav ul li a:hover {
 }
 
 /* Keyframes */
-@-webkit-keyframes fill {
+@keyframes fill {
     0% {
       width: 0%;
       height: 1px;
@@ -106,7 +115,7 @@ nav ul li a:hover {
   }
   
   /* Keyframes */
-  @-webkit-keyframes circle {
+  @keyframes circle {
     0% {
       width: 1px;
       top: 0;
@@ -164,6 +173,10 @@ nav ul li a:hover {
 /* products page */
 .cues-heading{
     padding: 2rem;
+}
+
+.card-title {
+    color: #2c3531;
 }
 
 .shafts-heading {
@@ -237,7 +250,34 @@ nav ul li a:hover {
 
 /* footer */
 
-footer i {
+footer .bi-arrow-up-square {
     position: relative;
     bottom: 11px;
+}
+
+footer .bi-arrow-up-square:hover {
+    color: white;
+    transition: 0.4s;
+}
+
+footer .lead a {
+    color: black;
+    margin-left: 1em;
+}
+
+footer .lead a:hover {
+    color: white;
+    transition: 0.4s;
+    
+}
+
+/* push footer content to the left on small 
+screen to allow the social links to fit */
+@media screen and (max-width: 576px) {
+    footer {
+        margin-left: -40px;
+    }
+    footer .lead a {
+        margin-left: 0.5em;
+    }
 }
