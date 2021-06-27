@@ -1,16 +1,16 @@
 {% extends 'webpage/base.html' %}
 {% load static %}
 {% block content %}
-<section class="p-5">
+<section class="pt-5">
     <div class="container">
-        <h2 class="text-center bg-darkk text-infoo product-heading cues-heading">CUES FOR SALE</h2>
-        <div class="row mt-5">
+        <h2 class="text-center bg-darkk text-infoo product-heading">CUES FOR SALE</h2>
+        <div class="row mt-4">
             {% for product in products %}
             {% if product.type == 1%}
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6 col-lg-4 mb-3">
                 <div class="card bg-infoo cues-card">
                     <div class="card-body text-center text-custom">
-                        <img src="{{ product.image.url }}" class="mb-3" alt="Sure custom cue">
+                        <img src="{{ product.image.url }}" class="img-fluid mb-3" alt="Sure custom cue">
                         <h4 class="card-title mb-3">{{product.name}}</h4>
                         <h6>&#8364; {{product.price}}</h6>
                         <!-- use accordion so user can toggle product description -->
@@ -34,21 +34,28 @@
         </div>
     </div>
 </section>
-<section class="p-3">
+<section class="pt-5">
     <div class="container">
         <h2 class="text-center bg-infoo text-custom shafts-heading">SURE SHAFTS</h2>
-        <div class="row mt-5">
+        <div class="row mt-4">
             {% for product in products %}
             {% if product.type == 2%}
-            <div class="card mb-3 bg-darkk shafts-card">
-                <div class="row g-0 card-body text-center">
-                    <div class="col-md-4">
-                        <img src="{{ product.image.url }}" class="img-fluid m-3" alt="{{product.name}}">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body text-infoo m-3">
-                            <h5 class="card-title">{{product.name}}</h5>
-                            <p class="card-text text-white">{{product.description}} Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus deserunt earum incidunt, corrupti, eligendi eius ut assumenda sint est nisi cum. Praesentium tempora nostrum temporibus ducimus ipsam consequatur, quos error.</p>
+            <div class="col-12 mb-3">
+                <div class="card bg-darkk shafts-card">
+                    <div class="card-body text-center">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="{{ product.image.url }}" class="img-fluid" alt="{{product.name}}">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body text-infoo">
+                                    <h5>{{product.name}}</h5>
+                                    <p class="card-text text-white">{{product.description}} Lorem ipsum dolor sit, amet
+                                        consectetur adipisicing elit. Natus deserunt earum incidunt, corrupti, eligendi
+                                        eius ut assumenda sint est nisi cum. Praesentium tempora nostrum temporibus
+                                        ducimus ipsam consequatur, quos error.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,26 +66,30 @@
     </div>
 </section>
 
-<section class="p-3">
+<section class="pt-5">
     <div class="container">
-        <h2 class="text-center bg-darkk text-infoo cues-heading product-heading">SURE WRAPS</h2>
-        <p class="text-center text-infoo mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel natus sed voluptatum rerum hic quaerat? Quaerat odio itaque molestias, quo, quasi iste maiores tempore facere sunt explicabo repellat necessitatibus debitis dolores nemo natus laborum vitae veritatis, architecto iusto expedita officiis aliquam consequatur ratione. Veritatis sapiente asperiores accusamus exercitationem dolore.</p>
-        <div class="row mt-5">
-            {% for product in products %}
-            {% if product.type == 3%}
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card bg-infoo cues-card">
-                    <div class="card-body text-center text-custom">
-                        <img src="{{ product.image.url }}" class="img-fluid mb-3" alt="Sure custom cue">
-                        <h4 class="card-title mb-3">{{product.name}}</h4>
-                        <h6>&#8364; {{product.price}}</h6>
-                        <p class="card-text">{{product.description}}</p>
-                    </div>
+        <h2 class="text-center bg-darkk text-infoo product-heading">SURE WRAPS</h2>
+        <p class="text-center text-infoo mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel natus
+            sed voluptatum rerum hic quaerat? Quaerat odio itaque molestias, quo, quasi iste maiores tempore facere sunt
+            explicabo repellat necessitatibus debitis dolores nemo natus laborum vitae veritatis, architecto iusto
+            expedita officiis aliquam consequatur ratione. Veritatis sapiente asperiores accusamus exercitationem
+            dolore.</p>
+        <div class="row">
+        {% for product in products %}
+        {% if product.type == 3%}
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+            <div class="card bg-infoo cues-card">
+                <div class="card-body text-center text-custom">
+                    <img src="{{ product.image.url }}" class="img-fluid mb-3" alt="Sure custom cue">
+                    <h4 class="card-title mb-3">{{product.name}}</h4>
+                    <h6>&#8364; {{product.price}}</h6>
+                    <p class="card-text">{{product.description}}</p>
                 </div>
             </div>
-            {% endif %}
-            {% endfor %}
         </div>
+        {% endif %}
+        {% endfor %}
+    </div>
     </div>
 </section>
 

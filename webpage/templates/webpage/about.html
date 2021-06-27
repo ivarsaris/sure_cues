@@ -2,19 +2,19 @@
 {% load static %}
 {% block content %}
 <!-- ABOUT US SECTION -->
-<section class="p-5">
+<section class="pt-5">
     <div class="container">
-        <div class="row align-items-center text-center justify-content-between">
-            <h2 class="bg-darkk text-infoo cues-heading product-heading">ABOUT US</h2>
-            <p class="text-center text-infoo mt-5">“High-tech hidden for best playability, symmetry in design with
-                highlighted woods. No overload in any direction. Freestyle, modern or classic designs. Leading to high
-                performance cues that players can trust.”</p>
-            <div class="col-md col-lg-4">
-                <img src="{% static 'webpage/media/woods.jpg'%}" class="img-fluid p-2" alt="">
+        <h2 class="text-center bg-darkk text-infoo product-heading">ABOUT US</h2>
+        <p class="text-center text-infoo mt-5 mb-5">“High-tech hidden for best playability, symmetry in design with
+            highlighted woods. No overload in any direction. Freestyle, modern or classic designs. Leading to high
+            performance cues that players can trust.”</p>
+        <div class="row">
+            <div class="col-md col-lg-4 mt-3 text-center">
+                <img src="{% static 'webpage/media/woods.jpg'%}" class="img-fluid" alt="">
             </div>
-            <div class="col-md col-lg-8">
-                <h4 class="text-center text-infoo mt-5">Philosophy</h4>
-                <p class="text-center text-infoo mt-2">For me, a cue needs to provide a good hit and have low deflection
+            <div class="col-md col-lg-8 mt-3">
+                <h4 class="text-center text-infoo">Philosophy</h4>
+                <p class="text-center text-infoo mt-3">For me, a cue needs to provide a good hit and have low deflection
                     characteristics. A quality
                     construction, that's build to last, is obligatory. Players and cues are individual in so many
                     aspects, so we need to be flexible when it comes
@@ -26,10 +26,10 @@
                     playability and manufacturing quality.</p>
             </div>
         </div>
-        <div class="row align-items-center text-center justify-content-between">
-            <div class="col-md col-lg-8">
-                <h4 class="text-center text-infoo mt-5">My story</h4>
-                <p class="text-center text-infoo mt-2">I started out as a snooker player. When I switched to play I
+        <div class="row">
+            <div class="col-md col-lg-8 mt-3">
+                <h4 class="text-center text-infoo">My story</h4>
+                <p class="text-center text-infoo mt-3">I started out as a snooker player. When I switched to play I
                     couldn't find a right cue for me to play
                     with, because I was used to my snooker cue. So, I started experimenting on my own at the age of 19
                     in 2005. At that time I felt that
@@ -38,8 +38,8 @@
                     Today, I'm in contact with several
                     cue makers and I think I found my own way of building a great player cue.</p>
             </div>
-            <div class="col-md col-lg-4">
-                <img src="{% static 'webpage/media/andreas.jpg'%}" class="img-fluid p-2" alt="">
+            <div class="col-md col-lg-4 mt-3 text-center">
+                <img src="{% static 'webpage/media/andreas.jpg'%}" class="img-fluid" alt="">
             </div>
         </div>
     </div>
@@ -47,14 +47,16 @@
 <!-- ABOUT US SECTION -->
 
 <!-- Gallery -->
-<section class="p-3">
-    <div class="row">
+<section class="pt-5">
+    <div class="container">
         <h2 class="text-center bg-infoo text-custom shafts-heading mb-5">GALLERY</h2>
-        {% for image in gallery_images %}
-        <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 mb-lg-0">
-            <img src="{{ image.image.url }}" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+        <div class="row">
+            {% for image in gallery_images %}
+            <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 mb-lg-0 text-center">
+                <img src="{{ image.image.url }}" class="w-100 shadow-1-strong rounded mb-4" alt="{{ image.name }}" />
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </section>
 
