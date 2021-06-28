@@ -16,11 +16,11 @@
                         <!-- use accordion so user can toggle product description -->
                         <p>
                             <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                data-bs-target="#{{product.name}}" aria-expanded="false" aria-controls="collapseExample">
                                 <i class="bi bi-caret-down"></i> See product description
                             </button>
                         </p>
-                        <div class="collapse bg-infoo" id="collapseExample">
+                        <div class="collapse bg-infoo" id="{{product.name}}">
                             <p class="card-text">
                                 {{product.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
                                 illo iusto assumenda ratione cum tenetur pariatur mollitia voluptate porro perspiciatis.
@@ -48,7 +48,7 @@
                                 <img src="{{ product.image.url }}" class="img-fluid" alt="{{product.name}}">
                             </div>
                             <div class="col-md-8">
-                                <div class="card-body text-infoo">
+                                <div class="card-body text-infoo shafts-card-text">
                                     <h5>{{product.name}}</h5>
                                     <p class="card-text text-white">{{product.description}} Lorem ipsum dolor sit, amet
                                         consectetur adipisicing elit. Natus deserunt earum incidunt, corrupti, eligendi

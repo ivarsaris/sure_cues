@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Product, Repair, GalleryImage
+from .models import Product, Repair, GalleryImage, CarouselImage
 from django.core.mail import send_mail
 
 def home(request):
-    return render(request, 'webpage/index.html', {'title': 'Home'})
+    info = {
+        'carousel_images': CarouselImage.objects.all(),
+        'title': home
+    }
+    return render(request, 'webpage/index.html', info)
 
 def products(request):
     info = {

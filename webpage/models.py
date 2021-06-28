@@ -29,3 +29,10 @@ class GalleryImage(models.Model):
 
     def __str__(self):
         return f'{self.name} GalleryImage'
+
+class CarouselImage(models.Model):
+    name = models.CharField(max_length=40)
+    image = models.ImageField(default='default.jpg', upload_to='carousel_images')
+
+    def __str__(self):
+        return f'{self.name} CarouselImage'
