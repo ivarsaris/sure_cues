@@ -161,6 +161,20 @@ nav ul li a:hover {
     height: auto;
 }
 
+.impressum-link {
+    color: #D9B08c;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+
+.impressum-link:hover {
+    color: white;
+    transition: 0.4s;
+}
+
+/* products page */
 .card-title {
     color: #2c3531;
 }
@@ -193,6 +207,10 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
+.specs-button {
+    color:#D9B08c;
+}
+
 /* repairs table */
 .repair-price {
     text-align: right;
@@ -203,12 +221,17 @@ nav ul li a:hover {
 }
 
 /* contact form */
+.contact-message {
+    padding: 0.5em;
+    box-shadow: 0 0 5px 2px #d1e8e2;
+    border-radius: 5px;
+}
+
 .contact-form {
     background:rgba(0,0,0,.6);
     border-radius: 5px;
     color:#D9B08c;
     margin-bottom: 100px;
-    margin-top: 50px;
     padding: 20px;
     box-shadow: 0 0 5px 2px grey;
 }

@@ -16,7 +16,8 @@
                         <!-- use accordion so user can toggle product description -->
                         <p>
                             <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#{{product.name}}" aria-expanded="false" aria-controls="collapseExample">
+                                data-bs-target="#{{product.name}}" aria-expanded="false"
+                                aria-controls="collapseExample">
                                 <i class="bi bi-caret-down"></i> See product description
                             </button>
                         </p>
@@ -54,6 +55,9 @@
                                         consectetur adipisicing elit. Natus deserunt earum incidunt, corrupti, eligendi
                                         eius ut assumenda sint est nisi cum. Praesentium tempora nostrum temporibus
                                         ducimus ipsam consequatur, quos error.</p>
+                                    <a href="#shaft-specs"><button class="btn specs-button btn-outline-light" type="button">
+                                        <i class="bi bi-caret-down"></i> See shaft specifications
+                                    </button></a>
                                 </div>
                             </div>
                         </div>
@@ -62,6 +66,35 @@
             </div>
             {% endif %}
             {% endfor %}
+            <h5 class="text-center text-infoo mt-3 mb-3" id="shaft-specs">Shaft specifications</h5>
+            <div class="table-responsive">
+                <table class="table bg-darkk table-bordered text-infoo">
+                    <thead>
+                        <tr>
+                            <th scope="col">Shaft</th>
+                            <th scope="col">diameter (mm)</th>
+                            <th scope="col">ferrule length(mm)</th>
+                            <th scope="col">length (inch)</th>
+                            <th scope="col">available joints</th>
+                            <th scope="col">taper</th>
+                            <th scope="col">price(&#8364;)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="repairs-table-body">
+                        {% for shaft in shaftSpecifications %}
+                        <tr>
+                            <th scope="row">{{shaft.name}}</th>
+                            <td>{{shaft.diameter}}</td>
+                            <td>{{shaft.ferrule}}</td>
+                            <td>{{shaft.length}}</td>
+                            <td>{{shaft.joint}}</td>
+                            <td>{{shaft.taper}}</td>
+                            <td>{{shaft.price}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </section>
@@ -69,27 +102,27 @@
 <section class="pt-5">
     <div class="container">
         <h2 class="text-center bg-darkk text-infoo product-heading">SURE WRAPS</h2>
-        <p class="text-center text-infoo mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel natus
+        <p class="text-center text-infoo mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel natus
             sed voluptatum rerum hic quaerat? Quaerat odio itaque molestias, quo, quasi iste maiores tempore facere sunt
             explicabo repellat necessitatibus debitis dolores nemo natus laborum vitae veritatis, architecto iusto
             expedita officiis aliquam consequatur ratione. Veritatis sapiente asperiores accusamus exercitationem
             dolore.</p>
         <div class="row">
-        {% for product in products %}
-        {% if product.type == 3%}
-        <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-            <div class="card bg-infoo cues-card">
-                <div class="card-body text-center text-custom">
-                    <img src="{{ product.image.url }}" class="img-fluid mb-3" alt="Sure custom cue">
-                    <h4 class="card-title mb-3">{{product.name}}</h4>
-                    <h6>&#8364; {{product.price}}</h6>
-                    <p class="card-text">{{product.description}}</p>
+            {% for product in products %}
+            {% if product.type == 3%}
+            <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+                <div class="card bg-infoo cues-card">
+                    <div class="card-body text-center text-custom">
+                        <img src="{{ product.image.url }}" class="img-fluid mb-3" alt="Sure custom cue">
+                        <h4 class="card-title mb-3">{{product.name}}</h4>
+                        <h6>&#8364; {{product.price}}</h6>
+                        <p class="card-text">{{product.description}}</p>
+                    </div>
                 </div>
             </div>
+            {% endif %}
+            {% endfor %}
         </div>
-        {% endif %}
-        {% endfor %}
-    </div>
     </div>
 </section>
 

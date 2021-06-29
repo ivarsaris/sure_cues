@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Product, Repair, GalleryImage, CarouselImage
+from .models import Product, Repair, GalleryImage, CarouselImage, ShaftSpec
 from django.core.mail import send_mail
 
 def home(request):
@@ -10,9 +10,16 @@ def home(request):
     }
     return render(request, 'webpage/index.html', info)
 
+def impressum(request):
+    info = {
+        'title': impressum
+    }
+    return render(request, 'webpage/impressum.html', info)
+
 def products(request):
     info = {
         'products': Product.objects.all(),
+        'shaftSpecifications': ShaftSpec.objects.all(),
         'title': 'Products'
     }
     return render(request, 'webpage/products.html', info)

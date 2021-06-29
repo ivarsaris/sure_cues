@@ -15,6 +15,18 @@ class Product(models.Model):
     def __str__(self):
         return f'{self.name} Product'
 
+class ShaftSpec(models.Model):
+    name = models.CharField(max_length=40)
+    price = models.CharField(max_length=40)
+    diameter = models.CharField(max_length=40)
+    ferrule = models.CharField(max_length=40)
+    length = models.CharField(max_length=40)
+    joint = models.CharField(max_length=40)
+    taper = models.CharField(max_length=40)
+
+    def __str__(self):
+        return f'{self.name} ShaftSpec'
+
 class Repair(models.Model):
     type = models.IntegerField(default=1)
     name = models.CharField(max_length=40)

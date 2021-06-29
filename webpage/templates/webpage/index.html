@@ -23,15 +23,6 @@
                         </div>
                         {% endif %}
                         {% endfor %}
-                        <!-- <div class="carousel-item">
-                            <img src="{% static 'webpage/media/asure2.jpg'%}" class="d-block w-100" alt="sure custom cues slide 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'webpage/media/asure3.jpg'%}" class="d-block w-100" alt="sure custom cues slide 3">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'webpage/media/asure4.jpg'%}" class="d-block w-100" alt="sure custom cues slide 4">
-                        </div> -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
@@ -46,6 +37,7 @@
                 </div>
             </div>
         </div>
+        <div><a href="{% url 'sure-impressum' %}" class="nav-link impressum-link">Impressum</a></div>
     </div>
 </section>
 {% endblock content %}
